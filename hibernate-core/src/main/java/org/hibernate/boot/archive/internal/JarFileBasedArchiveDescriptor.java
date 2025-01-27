@@ -66,6 +66,10 @@ public class JarFileBasedArchiveDescriptor extends AbstractArchiveDescriptor {
 					continue;
 				}
 
+				if (entryName.endsWith(".zip")){
+					continue;
+				}
+
 				if ( entryName.equals( getEntryBasePrefix() ) ) {
 					// exact match, might be a nested jar entry (ie from jar:file:..../foo.ear!/bar.jar)
 					//

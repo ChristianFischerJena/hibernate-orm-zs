@@ -7,10 +7,15 @@
 
 buildscript {
 	repositories {
+		maven { url 'https://repo.grails.org/grails/core/' }
+		maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+		maven { url "https://dl.bintray.com/asciidoctor/maven/" }
+
 		jcenter()
 		mavenCentral()
 	}
 	dependencies {
+		classpath "biz.aQute.bnd:biz.aQute.bndlib:4.2.0"           // added
 		classpath 'org.hibernate.build.gradle:hibernate-matrix-testing:3.0.0.Final'
 		classpath 'org.hibernate.build.gradle:version-injection-plugin:1.0.0'
 		classpath 'gradle.plugin.com.github.lburgazzoli:gradle-karaf-plugin:0.5.1'
